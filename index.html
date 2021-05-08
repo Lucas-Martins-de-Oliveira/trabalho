@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Produtos</h1>
+    </header>
+    <main>
+        <section id="produtos" class="container-fluid espaco" ondrop="OnDrop(event)" ondragover="OnDragOver(event)">
+            <article id="1" class="card" draggable="true" ondragstart="onDragStart(event)" ondragover="onDragOver(event)">
+                <table>
+                    <tr>
+                        <div>
+                            <th>
+                                <img src="https://picsum.photos/64/64?grayscale">
+                            </th>
+                            <th>
+                                <div>
+                                    <h1>Produto 1</h1>
+                                    <p>Descrição</p>
+                                </div>
+                            </th>
+                        </div>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>
+                            <div>
+                                <input id="qtdProduto1" type="number" name="qtde" min="0" value="0">
+                                <input id="vlrProduto1" type="text" name="valor" value="2.50" disabled>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </article>
+
+            <article id="2" class="card" draggable="true" ondragstart="onDragStart(event)" ondragover="onDragOver(event)">
+                <table>
+                    <tr>
+                        <div>
+                            <th>
+                                <img src="https://picsum.photos/64/64?grayscale">
+                            </th>
+                            <th>
+                                <div>
+                                    <h1>Produto 2</h1>
+                                    <p>Descrição</p>
+                                </div>
+                            </th>
+                        </div>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>
+                            <div>
+                                <input id="qtdProduto2" type="number" name="qtde" min="0" value="0">
+                                <input id="vlrProduto2" type="text" name="valor" value="3.50" disabled>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <div>
+            <header>
+                <h1>Carrinho</h1>
+            </header>
+            <section id="checkout" class="container-fluid">
+                <div id="carrinho" class="espaco" ondrop="OnDrop(event)" ondragover="OnDragOver(event)" ondragleave="OnDragLeave(event)"> </div>
+                <section class="container-fluid bg-light">
+                    <table>
+                        <tbody>
+                            <tr style="text-align:center;">
+                                <th></th>
+                                <td>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>Total itens</th>
+                                                <td id="qtdProdutos">0</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total</th>
+                                                <td id="vlrTotal">0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+        </div>
+    </main>
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</body>
+
+</html>
